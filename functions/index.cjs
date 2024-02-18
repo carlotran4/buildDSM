@@ -8,7 +8,7 @@ const app = express();
 const path = require("path");
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve("./client/dist")));
+app.use(express.static(path.resolve("../client/dist")));
 
 var jsonParser = bodyParser.json();
 

@@ -1,5 +1,19 @@
-const { onRequest } = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const { initializeApp } = require("firebase/app");
+const { getAnalytics } = require("firebase/analytics");
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBHnm2i4ILlQ4It8aans2I3QGYPqur7AvM",
+  authDomain: "builddsm-905a9.firebaseapp.com",
+  projectId: "builddsm-905a9",
+  storageBucket: "builddsm-905a9.appspot.com",
+  messagingSenderId: "84861718448",
+  appId: "1:84861718448:web:6655f8c4ead3a5e53dd075",
+  measurementId: "G-RH0W88ZMVX",
+};
+
+// Initialize Firebase
+const firebase_app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebase_app);
 
 const bodyParser = require("body-parser");
 

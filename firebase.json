@@ -12,7 +12,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "app"
+        "destination": "firebase_app"
       }
     ]
   }

@@ -1,31 +1,14 @@
-const { initializeApp } = require("firebase/app");
-const { getAnalytics } = require("firebase/analytics");
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBHnm2i4ILlQ4It8aans2I3QGYPqur7AvM",
-  authDomain: "builddsm-905a9.firebaseapp.com",
-  projectId: "builddsm-905a9",
-  storageBucket: "builddsm-905a9.appspot.com",
-  messagingSenderId: "84861718448",
-  appId: "1:84861718448:web:6655f8c4ead3a5e53dd075",
-  measurementId: "G-RH0W88ZMVX",
-};
-
-// Initialize Firebase
-const firebase_app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(firebase_app);
-
 const bodyParser = require("body-parser");
 
 const express = require("express");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 const path = require("path");
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve("../client/dist")));
+app.use(express.static(path.resolve("./client/dist")));
 
 var jsonParser = bodyParser.json();
 

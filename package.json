@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.cjs",
-    "build": "python -m pip install -r requirements.txt --user && cd ../client && npm install && npm run build",
+    "build": "python3 -m pip install -r requirements.txt --user && cd ./client && npm install && npm run build",
     "install-all": "npm install && cd client && npm install"
   },
   "keywords": [],

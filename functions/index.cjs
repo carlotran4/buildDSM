@@ -1,8 +1,11 @@
+const { onRequest } = require("firebase-functions/v2/https");
+const logger = require("firebase-functions/logger");
+
 const bodyParser = require("body-parser");
 
 const express = require("express");
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 const app = express();
 const path = require("path");
